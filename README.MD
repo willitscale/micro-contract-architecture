@@ -13,7 +13,7 @@ A contract design pattern to detach functionality and enable contract mutability
 Micro contract architecture is based around the microservice architecture design. This where functionality of one system is spread across multiple smaller components, allowing individual component modification to not impact the entire system. The micro contract design encapsulates an single contract which follows a gateway design pattern that delegates functionality to micro contracts.
 
 ## Motivation
-The micro contract architecture is to addresses two key issues within smart contracts. The first is the immutability of contracts, once a contract has been deployed to the network it is set in stone and any bugs or vulnerabilities are set firmly with it. Micro contracts won't resolve this completely, but allows contracts to have detached functionality and enables publishers to fix core issues in a live contract. The second issue this will help resolve is monolithic contracts, where an entire application's functionality is contained within a single contract. Monolithic architecture is one of the key driving forces many service developers move towards a micro base architecture. Functionality detachment enables improved development, code clarity, maintainability and minimizes deployment risks.
+The micro contract architecture is to addresses two key issues within smart contracts. The first is the immutability of contracts, once a contract has been deployed to the network it is set in stone and any bugs or vulnerabilities are set firmly with it. Micro contracts won't resolve this completely, but allows contracts to have detached functionality and enables publishers to fix core issues in a live contract. The second issue this will help resolve is the need for monolithic contracts, where an entire application's functionality is contained within a single contract. Monolithic architecture is one of the key driving forces many service developers move towards a micro base architecture. Functionality detachment enables improved development, code clarity, maintainability and minimizes deployment risks.
 
 ## Specification
 There are two core components of the micro contract architecture design which are the gateway and the micro contract.
@@ -22,7 +22,7 @@ There are two core components of the micro contract architecture design which ar
 
 #### The Gateway
 
-The gateway acts as a not just a relay, but also a component manager. It has the ability to delegate contracts to lookup keys and control access to components.
+The gateway acts as a not just a relay, but also a component manager. It has the ability to delegate lookup keys to contracts and control access to components.
 
 ```javascript
 contract Gateway {
@@ -166,3 +166,4 @@ Currently, there is a limitation on passing dynamic values between contract such
 
 ## References
 - [Pattern: Microservice Architecture](http://microservices.io/patterns/microservices.html)
+- [Micro Contract Architecture Example](https://github.com/willitscale/micro-contract-architecture)
