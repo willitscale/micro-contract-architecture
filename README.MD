@@ -1,3 +1,4 @@
+    EIP: <to be assigned>
     Title: Micro Contract Architecture
     Author: James Lockhart <james@n3tw0rk.co.uk>
     Type: Standard Track
@@ -134,13 +135,13 @@ contract Micro {
 
 Due to the services being in essence part of the gateway all interactions should be limited to and only to the gateway its self.
 
-```
+```javascript
 address internal _gateway;
 ```
 
 The gateway address.
 
-```
+```javascript
 modifier isGateway(address addr) {
   require(_gateway == addr);
   _;
@@ -149,7 +150,7 @@ modifier isGateway(address addr) {
 
 Modifier to verify a call is being made from the assigned gateway.
 
-```
+```javascript
 function isMicroContract() public isGateway(msg.sender) returns (address);
 ```
 
